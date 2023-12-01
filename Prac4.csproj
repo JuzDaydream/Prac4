@@ -67,9 +67,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\NORTHWND.MDF" />
+    <Content Include="App_Data\NORTHWND_log.ldf">
+      <DependentUpon>NORTHWND.MDF</DependentUpon>
+    </Content>
+    <Content Include="DataBound.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBound.aspx.cs">
+      <DependentUpon>DataBound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBound.aspx.designer.cs">
+      <DependentUpon>DataBound.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
